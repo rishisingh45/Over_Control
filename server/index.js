@@ -64,7 +64,7 @@ cron.schedule('*/30 * * * * *', async () => {
 
 // ─── Connect to MongoDB & Start Server ───
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, '0.0.0.0',() => console.log(`Server running on port ${PORT}`));
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/overcrowding_control';
 
 mongoose.connect(MONGO_URI)
